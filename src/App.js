@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
 
+import Member from './components/member/';
+import Input from './components/input';
+
+
 //To constants is necessary send the props through reference
 const Welcome = (props) => {
 
@@ -115,6 +119,11 @@ class App extends Component{
 			<button onClick={this.increase}>+</button>
 			</h3>
 			</div>
+
+			<Member name="Guest" />
+
+			<Input />
+
 
 			<div>
 				{this.state.time}
