@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import Member from './components/member/';
 import Input from './components/input';
+import Form from './components/Form';
 
 
 //To constants is necessary send the props through reference
@@ -123,6 +124,8 @@ class App extends Component{
 			<Member name="Guest" />
 
 			<Input />
+
+			<Form />
 
 
 			<div>
