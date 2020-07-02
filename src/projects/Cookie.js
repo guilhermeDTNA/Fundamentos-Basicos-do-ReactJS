@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import './style.css';
+import Stopwatch from './Stopwatch';
 
 class Button extends Component{
 	render(){
@@ -43,11 +45,19 @@ class Projects extends Component{
 	render(){
 		return(
 
-			<div className="container">
+			<div className="container-cookie">
 			<img src={require('./assets/biscoito.png')} className="img" />
 
 			<Button name="Open cookie" actionBtn={this.breakCookie}/>
 			<h3 className="textPhrase">{this.state.textPhrase}</h3>
+
+
+			<Router>
+			<Link to="./Stopwatch" className="btn">Go to next project</Link>
+
+
+			<Route path="" component={Stopwatch} />
+			</Router>
 			</div>
 
 			);
