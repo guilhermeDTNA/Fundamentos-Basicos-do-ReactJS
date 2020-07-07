@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import './style.css';
 import Stopwatch from './Stopwatch';
+import TodoList from './Todo-List';
 
 class Button extends Component{
 	render(){
@@ -53,10 +54,11 @@ class Projects extends Component{
 
 
 			<Router>
-			<Link to="./Stopwatch" className="btn">Go to next project</Link>
-
+			<Link to="./Stopwatch" className="btn">Go to the stopwatch project</Link>
+			<Link to="./Todo-List" className="btn">Go to the toto list project</Link>
 
 			<Route path="" component={Stopwatch} />
+			<Route path="" component={TodoList} />
 			</Router>
 			</div>
 
