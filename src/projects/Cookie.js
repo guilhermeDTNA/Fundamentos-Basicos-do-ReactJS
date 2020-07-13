@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+//import Routes from '../routes';
 
 import './style.css';
-import Stopwatch from './Stopwatch';
-import TodoList from './Todo-List';
 
 class Button extends Component{
 	render(){
@@ -53,13 +51,7 @@ class Projects extends Component{
 			<h3 className="textPhrase">{this.state.textPhrase}</h3>
 
 
-			<Router>
-			<Link to="./Stopwatch" className="btn">Go to the stopwatch project</Link>
-			<Link to="./Todo-List" className="btn">Go to the toto list project</Link>
-
-			<Route path="" component={Stopwatch} />
-			<Route path="" component={TodoList} />
-			</Router>
+			
 			</div>
 
 			);

@@ -6,7 +6,7 @@ class Header extends Component{
 		return(
 			<div>
 				<p>Header</p> <br />
-				<Link to="about">Go to About </Link>
+				<Link to="/classes/components/routesClasses/pages/about">Go to About </Link>
 				<hr />
 			</div>
 		);

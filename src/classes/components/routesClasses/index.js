@@ -1,16 +1,13 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
-class Home extends Component{
+export default class Projects extends Component{
+
 	render(){
 		return(
 			<div>
-				<p>Home</p>
-
-				<Link to="/about"> Go to About </Link>
+				<h2>Classes of Routes</h2>
 			</div>
 		);
 	}
 }
-
-export default Home;
