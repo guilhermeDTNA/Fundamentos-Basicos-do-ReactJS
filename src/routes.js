@@ -4,7 +4,6 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Home from './Home';
 
 //Importing files from classes
-
 import Classes from './classes/';
 import Introduction from './classes/Introduction';
 import Form from './classes/components/Form';
@@ -24,7 +23,20 @@ import Projects from './projects/';
 import Cookie from './projects/Cookie';
 import Stopwatch from './projects/Stopwatch';
 import TodoList from './projects/TodoList';
+import HomeMovies from './projects/movies/pages/Home/';
+import Movie from './projects/movies/pages/Movie/';
+import {autenticated} from './projects/movies/auth';
 
+
+const PrivateRoute = ({component: Component, ...rest}) => (
+	<Route {...rest} render={props => (
+		autenticated() ? (
+			<Component {...props} />
+		) : (
+			<Redirect to={{pathname: '/', state: {from: props.location}}} />
+		)
+	)} />
+)
 
 
 const Routes = () => {
@@ -42,6 +54,11 @@ const Routes = () => {
 		<Route path="/projects/cookie" component={Cookie} />
 		<Route path="/projects/stopwatch" component={Stopwatch} />
 		<Route path="/projects/todo-list" component={TodoList} />
+		<Route exact path="/projects/movies/:id" component={Movie} />
+
+		<PrivateRoute exact path="/projects/movies/" component={HomeMovies} />
+
+		
 
 		<Route exact path="/classes" component={Classes} />
 		<Route path="/classes/introduction" component={Introduction} />

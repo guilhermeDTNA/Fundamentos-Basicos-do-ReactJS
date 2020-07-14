@@ -1,0 +1,9 @@
+.movie-info{
+	display: flex;
+	flex-direction: column;
+	max-width: 900px;
+}
+
+.movie-info img{
+	border-radius: 50px;
+}
