@@ -10,6 +10,10 @@ import Form from './classes/components/Form';
 import List from './classes/components/List';
 import RoutesClasses from './classes/components/routesClasses';
 import Requests from './classes/requests/Requests';
+import StyledComponents from './classes/styledComponents';
+
+import SinglePageApplication from  './classes/components/singlePageApplication/Home';
+import SinglePageApplicationHeader from  './classes/components/singlePageApplication/Header';
 
 //Importing files from routes classes
 import HomeRoutes from './classes/components/routesClasses/pages/home';
@@ -65,6 +69,8 @@ const Routes = () => {
 		<Route path="/classes/form" component={Form} />
 		<Route path="/classes/list" component={List} />
 		<Route path="/classes/requests" component={Requests} />
+		<Route path="/classes/styled-components" component={StyledComponents} />
+		<Route exact path="/classes/single-page-application/" component={SinglePageApplication} />
 		<Route path="/classes/routes" component={RoutesClasses} />
 		
 		<Route path="/classes/routes/home" component={HomeRoutes} />

@@ -17,6 +17,10 @@ export default class Classes extends Component{
 
 			<Link to="/classes/list">Go to classes about Lists </Link> <br />	
 
+			<Link to="/classes/styled-components/">Go to classes about Styled Component </Link> <br />	
+
+			<Link to="/classes/single-page-application/">Go to classes about Single Page Application </Link> <br />	
+
 			<hr />
 			</div>
 		);
