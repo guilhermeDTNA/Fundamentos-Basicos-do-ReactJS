@@ -22,6 +22,9 @@ import HeaderRoutes from './classes/components/routesClasses/header';
 import ProductRoutes from './classes/components/routesClasses/pages/product/';
 import MistakeRoutes from './classes/components/routesClasses/pages/error';
 
+//importing files from connection with Firebase
+import FirebaseClasses from './classes/firebase/';
+
 //Importing files from projects
 import Projects from './projects/';
 import Cookie from './projects/Cookie';
@@ -77,6 +80,8 @@ const Routes = () => {
 		<Route path="/classes/routes/about" component={AboutRoutes} />
 		<Route path="/classes/routes/header" component={HeaderRoutes} />
 		<Route path="/classes/routes/product/:id" component={ProductRoutes} />
+
+		<Route path="/classes/firebase" component={FirebaseClasses} />
 
 		<Route path="*" component={MistakeRoutes} />
 
