@@ -35,6 +35,9 @@ import Movie from './projects/movies/pages/Movie/';
 
 import HomeBlog from './projects/blog/src/components/Home';
 import HeaderBlog from './projects/blog/src/components/Header';
+import LoginBlog from './projects/blog/src/components/Login';
+import RegisterBlog from './projects/blog/src/components/Register';
+import DashboardBlog from './projects/blog/src/components/Dashboard';
 import FirebaseBlog from './projects/blog/firebase';
 
 import {authenticated} from './projects/movies/auth';
@@ -113,6 +116,9 @@ class Routes extends Component {
 				<div>
 				<HeaderBlog /> 
 				<Route exact path="/projects/blog" component={HomeBlog} />
+				<Route exact path="/projects/blog/register" component={RegisterBlog} />
+				<Route exact path="/projects/blog/login" component={LoginBlog} />
+				<Route exact path="/projects/blog/dashboard" component={DashboardBlog} />
 				</div>
 				
 				: 

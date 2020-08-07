@@ -10,7 +10,7 @@ function Header(){
 		<Link to="/projects/blog">
 		Blog Programmer
 		</Link>
-		<Link to="/login">
+		<Link to="/projects/blog/login">
 		Login
 		</Link>
 		</div>

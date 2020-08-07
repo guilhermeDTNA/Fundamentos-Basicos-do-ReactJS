@@ -1,1 +1,13 @@
-index.js
+import React, {Component} from 'react';
+
+class Dashboard extends Component{
+	render(){
+		return(
+			<div>
+			<h1>Dashboard screen</h1>
+			</div>
+		);
+	}
+}
+
+export default Dashboard;
