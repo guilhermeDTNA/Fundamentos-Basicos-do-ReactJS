@@ -50,7 +50,7 @@ class Register extends Component{
 
 					<br />
 					<label>Password:</label><br />
-					<input type="text" value={this.state.password} autoComplete="off" placeholder="Your password" onChange={(e) => this.setState({password: e.target.value})} />
+					<input type="password" value={this.state.password} autoComplete="off" placeholder="Your password" onChange={(e) => this.setState({password: e.target.value})} />
 
 					<br />
 					<button type="submit">Add</button>
