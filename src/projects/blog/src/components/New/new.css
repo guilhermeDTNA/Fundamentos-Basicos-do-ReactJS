@@ -27,6 +27,12 @@ form#newPost{
 	flex-direction: column;
 }
 
+form#newPost span{
+	text-align: center;
+	color: #FF0000;
+	font-size: 15px;
+}
+
 form#newPost input{
 	margin-bottom: 10px;
 }
