@@ -27,6 +27,20 @@ form#newPost{
 	flex-direction: column;
 }
 
+form#newPost label{
+	margin-bottom: 150px;
+}
+
+form#newPost img{
+	width: 200px;
+	height: 100px;
+	margin-bottom: 15px;
+}
+
+form#newPost progress{
+	margin-bottom: 15px;
+}
+
 form#newPost span{
 	text-align: center;
 	color: #FF0000;

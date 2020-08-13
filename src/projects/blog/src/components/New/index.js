@@ -13,7 +13,8 @@ class New extends Component{
 			image: null,
 			url: '',
 			description: '',
-			alert: ''
+			alert: '',
+			progress: 0
 		}
 		this.addBlog = this.addBlog.bind(this);
 		this.handleFile = this.handleFile.bind(this);
@@ -31,13 +32,13 @@ class New extends Component{
 	addBlog = async(e) => {
 		e.preventDefault();
 
-		if(this.state.title !== '' && this.state.image !== '' && this.state.description !== ''){
+		if(this.state.title !== '' && this.state.image !== '' && this.state.description !== '' && this.state.image !== null && this.state.url!==''){
 			let posts = firebase.app.ref('posts');
 			let key = posts.push().key;
 
 			await posts.child(key).set({
 				titulo: this.state.title,
-				image: this.state.image,
+				image: this.state.url,
 				descricao: this.state.description,
 				autor: localStorage.nome
 			});
@@ -77,16 +78,22 @@ class New extends Component{
 		.ref(`images/${currentUid}/${image.name}`)
 		.put(image);
 
-		/*await uploadTaks.on('state_changed', 
+		await uploadTaks.on('state_changed', 
 			(snapshot) => {
 				//progress
+				const progress = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
+				this.setState({progress}) //As the variables have the same name, we can pass only one time the one
 			},
 			(error) => {
 			//error
-			},
-			() => {
-				//success!
-			})/*/
+		},
+		() => {
+			firebase.storage.ref(`images/${currentUid}`)
+			.child(image.name).getDownloadURL()
+			.then(url => {
+				this.setState({url: url});
+			})
+		})
 	}
 
 	render(){
@@ -101,6 +108,13 @@ class New extends Component{
 			<span>{this.state.alert}</span>
 
 			<input type="file" onChange={this.handleFile}/> <br />
+
+			{this.state.url !== '' ? 
+				<img src={this.state.url} width="90" />
+
+				:
+				<progress value={this.state.progress} max="100" />
+		}
 
 			<label>Title: </label><br />
 			<input type="text" placeholder="Post's Name" value={this.state.title} autoFocus onChange={(e) => this.setState({title: e.target.value})} /><br />
