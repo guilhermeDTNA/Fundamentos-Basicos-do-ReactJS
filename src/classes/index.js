@@ -23,6 +23,8 @@ export default class Classes extends Component{
 
 			<Link to="/classes/firebase">Go to classes about Firebase managing </Link> <br />
 
+			<Link to="/classes/hooks">Go to classes about Hooks </Link> <br />
+
 			<hr />
 			</div>
 		);

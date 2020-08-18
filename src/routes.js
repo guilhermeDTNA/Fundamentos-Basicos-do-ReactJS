@@ -11,6 +11,7 @@ import List from './classes/components/List';
 import RoutesClasses from './classes/components/routesClasses';
 import Requests from './classes/requests/Requests';
 import StyledComponents from './classes/styledComponents';
+import ReactHooks from './classes/hooks';
 
 import SinglePageApplication from  './classes/components/singlePageApplication/Home';
 import SinglePageApplicationHeader from  './classes/components/singlePageApplication/Header';
@@ -109,6 +110,8 @@ class Routes extends Component {
 			<Route path="/classes/routes/product/:id" component={ProductRoutes} />
 
 			<Route path="/classes/firebase" component={FirebaseClasses} />
+
+			<Route path="/classes/hooks" component={ReactHooks} />
 
 
 
