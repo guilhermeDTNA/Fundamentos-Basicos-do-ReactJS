@@ -39,10 +39,11 @@ import HeaderBlog from './projects/blog/src/components/Header';
 import LoginBlog from './projects/blog/src/components/Login';
 import RegisterBlog from './projects/blog/src/components/Register';
 import DashboardBlog from './projects/blog/src/components/Dashboard';
-
 import NewBlog from './projects/blog/src/components/New';
-
 import FirebaseBlog from './projects/blog/firebase';
+
+import MainRepository from './projects/repository/src/pages/Main';
+import Repository from './projects/repository/src/pages/Repository';
 
 import {authenticated} from './projects/movies/auth';
 
@@ -93,6 +94,8 @@ class Routes extends Component {
 
 			<PrivateRoute exact path="/projects/movies/" component={HomeMovies} />
 
+			<Route exact path="/projects/repository/repository/:repository" component={Repository} />
+			<Route exact path="/projects/repository/" component={MainRepository} />
 
 
 			<Route exact path="/classes" component={Classes} />
@@ -117,6 +120,8 @@ class Routes extends Component {
 
 			/*TO VIEW THE PAGE 404, PLEASE COMMENT THE CODE BELOW*/
 			/*This part verify if the user is logged in the blog*/
+
+			{/*
 			{this.state.firebaseInitialized !== false ?
 
 				<div>
@@ -133,9 +138,9 @@ class Routes extends Component {
 
 				<div>
 				<h1>Loading</h1>
-				
 
 			</div>
+			*/}
 		}
 
 		<Route path="*" component={MistakeRoutes} />

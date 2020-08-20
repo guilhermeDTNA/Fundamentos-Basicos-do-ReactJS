@@ -14,7 +14,9 @@ export default class Projects extends Component{
 
 			<Link to="/projects/movies">Go to Movie project </Link> <br />
 
-			<Link to="/projects/blog">Go to Blog project </Link> <br />				
+			<Link to="/projects/blog">Go to Blog project </Link> <br />		
+
+			<Link to="/projects/repository">Go to Repository project using React Hooks </Link> <br />		
 			<hr />
 			</div>
 			);
