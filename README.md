@@ -13,6 +13,7 @@ Installed Libraries:
 
 .react-router-dom
 .styled-components
+.axios
 .react-icons
 .react-router-hash-link
 >>>>>>> Stashed changes
