@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {keyframes, css} from 'styled-components';
 
 export const Container = styled.div`
 max-width: 700px;
@@ -37,14 +37,44 @@ input{
 
 `;
 
-export const SubmitButton = styled.button`
-	background: #0D2636;
-	border: 0;
-	border-radius: 4px;
-	margin-left: 10px;
-	padding: 0 15px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+/*Creating animation for button*/
+const animate = keyframes `
+	//spinning the icon 
+	from{
+		transform: rotate(0deg);
+	}
+
+	to{
+		transform: rotate(360deg);
+	}
+
+`;
+
+export const SubmitButton = styled.button.attrs(props => ({
+	type: 'submit',
+	disabled: props.loading
+}))`
+background: #0D2636;
+border: 0;
+border-radius: 4px;
+margin-left: 10px;
+padding: 0 15px;
+display: flex;
+justify-content: center;
+align-items: center;
+
+	&[disabled]{
+		cursor: not-allowed;
+		opacity: 0.5;
+	}
+
+
+	${props => props.loading &&
+		css`
+			svg{
+				animation: ${animate} 2s linear infinite;
+			}
+		`
+	}
 
 `;
