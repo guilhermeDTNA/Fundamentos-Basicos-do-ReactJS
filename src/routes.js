@@ -94,7 +94,7 @@ class Routes extends Component {
 
 			<PrivateRoute exact path="/projects/movies/" component={HomeMovies} />
 
-			<Route exact path="/projects/repository/repository/:repository" component={Repository} />
+			<Route exact path="/projects/repository/:repository" component={Repository} />
 			<Route exact path="/projects/repository/" component={MainRepository} />
 
 

@@ -29,7 +29,7 @@ flex-direction: row;
 
 input{
 	flex: 1;
-	border: 1px solid #DDD;
+	border: 1px solid ${props => (props.error ? '#FF0000' : '#eee')};
 	padding: 10px 15px;
 	border-radius: 4px;
 	font-size: 17px;
@@ -77,4 +77,40 @@ align-items: center;
 		`
 	}
 
+`;
+
+export const List = styled.ul`
+
+	list-style: none;
+	margin-top: 20px
+
+	li{
+		padding: 15px 0;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+
+		//It will ignore the first element and then apply from the second
+		& + li{
+			border-top: 1px solid #eee;
+		}
+
+		a{
+			color:#0D2636;
+			text-decoration: none;
+		}
+	}
+`;
+
+export const DeleteButton = styled.button.attrs({
+	type: 'button'
+})`
+
+background: transparent;
+color: #0D2636;
+border: 0;
+padding: 8px 7px;
+outline: 0;
+border-radius: 4px;
 `;
