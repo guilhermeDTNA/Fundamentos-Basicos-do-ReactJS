@@ -3,7 +3,7 @@ import 'firebase/database';
 import 'firebase/auth';
 import 'firebase/storage';
 
-import firebase from './fireConnection';
+import firebase from '../../classes/firebase/fireConnection';
 
 class Firebase{
 	constructor(){

@@ -24,4 +24,3 @@ yarn-error.log*
 
 #files
 /src/classes/firebase/fireConnection.js
-/src/projects/blog/fireConnection.js
